@@ -5,7 +5,6 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #2c3e50;
-  color: #fff;
 }
 .container {
   display: flex;
@@ -25,6 +24,27 @@ body {
   min-width: 80px;
   text-align: center;
 }
+#message {
+  font-weight: bold;
+  transition: 0.3s;
+  color: #fff;
+}
+#counter.max {
+  color: red;
+}
+
+#counter.min {
+  color: blue;
+}
+
+#message.max {
+  color: red;
+}
+
+#message.min {
+  color: blue;
+}
+
 .button {
   width: 60px;
   height: 40px;
@@ -34,9 +54,6 @@ body {
   font-size: 20px;
   border-radius: 5px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 button:disabled {
