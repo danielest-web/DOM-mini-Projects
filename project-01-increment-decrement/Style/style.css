@@ -39,6 +39,12 @@ body {
   align-items: center;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
 #increment {
   background-color: #4da6ff;
 }

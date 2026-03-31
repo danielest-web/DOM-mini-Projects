@@ -3,26 +3,20 @@ const incrementBtn = document.getElementById('increment');
 const decrementBtn = document.getElementById('decrement');
 
 let count = 0;
+const updateCounter = (value) => {
+    count += value;
+    counter.textContent = count;
+
+    incrementBtn.disabled = count >= 10;
+    decrementBtn.disabled = count <= 0;
+};
 
 incrementBtn.addEventListener('click', () => {
-   count += 1;
-   counter.textContent = count;
-
-   if(count >= 10){
-      incrementBtn.setAttribute('disabled', true);
-   }else{
-      incrementBtn.removeAttribute('disabled', false);
-   }
-   
-});
+    updateCounter(1);
+})
 
 decrementBtn.addEventListener('click', () => {
-   count -= 1;
-   counter.textContent = count;
-
-      if(count <= 0){
-      decrementBtn.setAttribute('disabled', true);
-   }else{
-      decrementBtn.removeAttribute('disabled', false);
-   }
+    updateCounter(-1);
 });
+
+updateCounter(0);
